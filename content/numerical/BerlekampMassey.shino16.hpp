@@ -1,4 +1,8 @@
-// Returns shortest c s.t. a[i] = sum_j c[j] * a[i-j-1]
+/**
+ * Author: Masato Shinokawa
+ * Description: Returns shortest $c$ s.t. $a[i] = \sum_j c[j] \cdot a[i-j-1]$
+ */
+
 vi berlekamp_massey(const vi& a) {
   int i = 0;
   while (i < a.size() && !a[i]) i++;

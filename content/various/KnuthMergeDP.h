@@ -1,6 +1,6 @@
 /**
  * Author: Masato Shinokawa
- * Description: Starts with $dp(l, r) = 0$ ($r - l \leq 1$) and
+ * Description: $dp(l, r) = 0$ ($r - l \leq 1$),
  * $dp(l, r) = \min { dp(l, k) + dp(k, r) + cost(l, r) : l < k < r }$
  * Requires $cost(b,c) \leq cost(a,d)$ and
  *          $cost(a,c) + cost(b,d) \leq cost(a,d) + cost(b,c)$

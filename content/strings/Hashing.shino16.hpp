@@ -1,3 +1,9 @@
+/**
+ * Author: Masato Shinokawa
+ * Description: Rolling Hash with mod $2^61 - 1$
+ */
+
+
 #pragma once
 
 using ull = uint64_t;

@@ -1,7 +1,12 @@
+/**
+ * Author: Masato Shinokawa
+ * Description: Segment tree with lazy propagation
+ */
+
 #pragma once
 
 
-template <int N>
+template <size_t N>
 struct lazy_segtree {
 	// range add, range max
 	using T = int;
