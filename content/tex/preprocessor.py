@@ -219,7 +219,7 @@ def print_header(data, outstream):
     ind = lines.index(until) + 1
     header_length = len("".join(lines[:ind]))
     def adjust(name):
-        return name if name.startswith('.') else name.split('.')[0]
+        return name if name.startswith('.') else '.'.join(name.split('.')[:-1])
     output = r"\enspace{}".join(map(adjust, lines[:ind]))
     font_size = 10
     if header_length > 150:
