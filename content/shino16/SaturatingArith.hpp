@@ -1,3 +1,8 @@
+/**
+ * Author: Masato Shinokawa
+ * Description: Arithmetic operations that clamp the results into the range that the type can represent. You can use INT\_MIN/INT\_MAX, LLONG\_MIN/LLONG\_MAX in place of numeric\_limits<T>::min()/max().
+ */
+
 template <class T>
 auto sat_add(T a, T b) {
   T res;

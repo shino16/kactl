@@ -1,3 +1,8 @@
+/**
+ * Author: Masato Shinokawa
+ * Description: Division with rounding towards -inf (floor) or inf (ceil).
+ */
+
 template <class T>
 T div_floor(T a, T b) {
   T q = a / b, r = a % b;

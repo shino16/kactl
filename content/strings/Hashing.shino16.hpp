@@ -17,18 +17,18 @@ ull hmul(ull a, ull b) {
 	return hadd(t >> 61, t & HMOD);
 }
 
-constexpr ull C = 0x314159265;
+constexpr ull R = 0x314159265;
 
 struct RollingHash {
 	vector<ull> ha, pw;
 	RollingHash(auto&& s, int n) : ha(n+1), pw(n+1) {
 		pw[0] = 1;
-		rep(i,n) {
-			ha[i+1] = ha[i] * C + s[i],
-			pw[i+1] = pw[i] * C;
+		rep(i,0,n) {
+			ha[i+1] = hadd(hmul(ha[i], R), s[i]);
+			pw[i+1] = hmul(pw[i], R);
 		}
 	}
 	ull hash(int a, int b) {
-		return ha[b] - ha[a] * pw[b-a];
+		return hadd(ha[b], HMOD - hmul(ha[a], pw[b-a]));
 	}
 };
