@@ -4,7 +4,7 @@
  * $dp(l, r) = \min { dp(l, k) + dp(k, r) + cost(l, r) : l < k < r }$
  * Requires $cost(b,c) \leq cost(a,d)$ and
  *          $cost(a,c) + cost(b,d) \leq cost(a,d) + cost(b,c)$
- * for $a < b < c < d$ (wider is worse).
+ * for $a < b < c < d$.
  * Time: O(N^2)
  */
 template <class F>

@@ -2,7 +2,7 @@
  * Author: Masato Shinokawa
  * Description: Minimizes cost of $k$-partitions of $[0, n)$ with $k \leq max\_k$ ($k = max\_k$ if $cost(i,i) = \infty$).
  * Requires $cost(a,c) + cost(b,d) \leq cost(a,d) + cost(b,c)$
- * for $a < b < c < d$ (wider is worse).
+ * for $a < b < c < d$.
  * Time: O(kn + n^2)
  */
 template <class F>
