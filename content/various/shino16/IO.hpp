@@ -5,7 +5,7 @@
 
 void ints(auto& ...ints) { (scanf("%d ", &ints), ...); }
 void lls(auto& ...lls) { (scanf("%lld ", &lls), ...); }
-// skip whitespace and re-initialize s with a line (without '\n')
+// skip whitespace and re-initialize s with a line (without \n)
 void read_line(char *s) {scanf(" "), fgets(s, INT_MAX, stdin);}
 void read_line(string &s) { cin >> ws, getline(cin, s); }
 void print_vec(vector<int> v) {
