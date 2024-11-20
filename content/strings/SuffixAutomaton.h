@@ -50,16 +50,11 @@ struct suffix_automaton {
     }
     last = cur;
   }
-  suffix_automaton() {
-    st.clear();
-    sz = last = 0;
-  }
+  suffix_automaton() { st.clear(); sz = last = 0; }
   suffix_automaton(string &s) {
     st.clear();
     sz = last = 0;
     sa_init();
-    for(auto c: s) {
-      sa_extend(c);
-    }
+    for(auto c: s) sa_extend(c);
   }
 };
