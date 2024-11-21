@@ -11,4 +11,4 @@ int div_ceil(int a, int b) {
   int q = a / b, r = a % b;
   return q + ((r > 0 && b > 0) || (r < 0 && b < 0));
 }
-int rem(int a, int b){ int r = a % b; return r >= 0 ? r : r + abs(b); }
+int rem(int a, int b){ return (a %= b) >= 0 ? a : a + abs(b); }
