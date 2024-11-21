@@ -15,7 +15,8 @@ auto knuth_partition_dp(int max_k, int n, F cost) {
     fill(all(dp2), numeric_limits<T>::max() / 2);
     opt2[n+1] = n;
     repr(i, n + 1) rep2(j, opt[i], min(i, opt2[i + 1]) + 1) {
-      if (dp2[i] > dp[j] + cost(j, i)) dp2[i] = dp[j] + cost(j, i), opt2[i] = j;
+      if (dp2[i] > dp[j] + cost(j, i)) 
+        dp2[i] = dp[j] + cost(j, i), opt2[i] = j;
     }
     swap(dp, dp2);
     swap(opt, opt2);

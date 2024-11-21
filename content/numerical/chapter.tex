@@ -5,8 +5,9 @@
   \kactlimport{PolyRoots.h}
   \kactlimport{PolyInterpolate.h}
   \kactlimport{BerlekampMassey.h}
-  \kactlimport{BerlekampMassey.shino16.hpp}
+  % \kactlimport{BerlekampMassey.shino16.hpp}
   \kactlimport{LinearRecurrence.h}
+  \kactlimport{FastLinearRecurrence.h}
 
 \section{Optimization}
   \kactlimport{GoldenSectionSearch.h}
@@ -21,12 +22,22 @@
   \kactlimport{SolveLinear.h}
   \kactlimport{SolveLinear2.h}
   \kactlimport{SolveLinearBinary.h}
+  \kactlimport{Tridiagonal.h}
   \kactlimport{MatrixInverse.h}
   \kactlimport{MatrixInverse-mod.h}
-  \kactlimport{Tridiagonal.h}
 
 \section{Fourier transforms}
 	\kactlimport{FastFourierTransform.h}
 	\kactlimport{FastFourierTransformMod.h}
 	\kactlimport{NumberTheoreticTransform.h}
 	\kactlimport{FastSubsetTransform.h}
+
+\section{Newton's method for polynomials}
+    To solve {\small $F(Q) \equiv 0 \pmod{x^D}$},\\
+    let {\small $Q_{2k} \gets \left(Q_k - \frac{F(Q_k)}{F'(Q_k)}\right) \pmod {x^{2k}}$}.
+
+    For polynomial $A$:\\
+    $\frac{1}{A}$: $Q_1 \gets \frac{1}{a_0}$, $Q_{2k} \gets Q_k(2 - AQ_k)$\\
+    $(\log A)' = \frac{A'}{A}$\\
+    $\exp A$, $a_0 = 0$: $Q_1 \gets 0$, $Q_{2k} \gets Q_k(1 + A - \log Q_k)$\\
+    $A^k = \exp (k \log A)$
