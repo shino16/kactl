@@ -52,3 +52,8 @@
 \kactlimport{shino16/SaturatingArith.hpp}
 \kactlimport{shino16/Div.hpp}
 \kactlimport{shino16/Rand.hpp}
+
+\subsubsection{LARSCH (simplified)}
+For $A$: Monge, strict lower triangular. Useful for $dp[i] = \min (dp[j] + w(j, i))$ ($j < i$, $dp[0] = 0$).
+
+pre: checked $A[:l]$, $A[r, :l]$, post: checked $A[:r+1]$
